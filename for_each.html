@@ -1,0 +1,16 @@
+<script>
+  const companies = [
+    { name: 'bhanu', category: 'auto' },
+    { name: 'taddy', category: 'manual' },
+  ];
+
+  for (let i = 0; i < companies.length; i++) {
+    console.log(companies[i]);
+  }
+
+  companies.forEach((com, index) => {
+    console.log(com, index);
+  });
+
+  companies.forEach((ele) => console.log((ele.name = 'bhanu')));
+</script>

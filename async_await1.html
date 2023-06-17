@@ -1,0 +1,39 @@
+<script>
+  console.log('start');
+  const pobj1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('inside pobj1');
+      let roll_no = [1, 2, 3, 4];
+      resolve(roll_no);
+    }, 2000);
+  });
+
+  const getBiodata = (rollno) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let biodata = {
+          name: 'Bhanu',
+          age: '22',
+        };
+        console.log(biodata);
+        resolve(`hiii my name is ${biodata.name} my roll no is ${rollno}`);
+      }, 2000);
+    });
+  };
+
+  async function getdata() {
+    const roll = await pobj1;
+    console.log(roll);
+
+    const biodata = await getBiodata(roll[2]);
+    console.log(biodata);
+
+    return biodata;
+  }
+
+  getdata().then((value) => {
+    console.log(value);
+  });
+
+  console.log('end');
+</script>

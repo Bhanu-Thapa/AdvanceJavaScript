@@ -1,0 +1,32 @@
+<script>
+  console.log('start');
+  function getName(name) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('inside setTimeout');
+        resolve(name);
+      }, 2000);
+    });
+  }
+
+  function getHobbies(name) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('inside hobbies');
+        console.log(name);
+        resolve(['football', 'taekwondo']);
+      }, 1000);
+    });
+  }
+
+  getName('Bhanu')
+    .then((nm) => {
+      console.log(nm);
+      getHobbies(nm);
+    })
+    .then((hobby) => {
+      console.log(hobby);
+    });
+
+  console.log('end');
+</script>

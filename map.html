@@ -1,0 +1,38 @@
+<script>
+  const arr = [5, 1, 3, 6, 2];
+
+  const companies = [
+    { name: 'bhanu', category: 'auto' },
+    { name: 'taddy', category: 'manual' },
+  ];
+
+  const output = arr.map((ar) => ar * 2);
+  console.log(output);
+
+  const dummy = companies.map((a) => {
+    a.name === 'bhanu';
+    return `${a.name}`;
+  });
+  console.log(dummy);
+
+  // function double(x) {
+  //   console.log(x * 2);
+  // }
+
+  // arr.map(double);
+
+  // function double(x) {
+  //   return x * 2;
+  // }
+
+  // const output = arr.map(double);
+  // console.log(output);
+
+  // arr.map(function fun(ar) {
+  //   console.log(ar * 2);
+  // });
+
+  // arr.map(function (ar) {
+  //   console.log(ar * 2);
+  // });
+</script>

@@ -1,0 +1,24 @@
+<script>
+  const arr = [5, 1, 3, 6, 2];
+
+  // function isOdd(x) {
+  //   return x % 2;
+  // }
+  // const output = arr.filter(isOdd);
+
+  // const output = arr.filter(function isOdd(x) {
+  //   return x % 2;
+  // });
+
+  const output = arr.filter((x) => x % 2);
+
+  console.log(output);
+
+  const companies = [
+    { name: 'bhanu', cate: 'auto' },
+    { name: 'taddy', cate: 'manual' },
+  ];
+
+  const com = companies.filter((company) => company.name === 'bhanu');
+  console.log(com);
+</script>

@@ -1,0 +1,11 @@
+<script>
+  const personOne = (friend, callfrd) => {
+    console.log(`call you later ${friend}`);
+    callfrd();
+  };
+  const personTwo = () => {
+    console.log('hey, i call back You');
+  };
+
+  personOne('Bhanu', personTwo);
+</script>

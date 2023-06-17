@@ -1,0 +1,33 @@
+<script>
+  console.log('start');
+  function getName(name) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('inside getName');
+        console.log(name);
+        resolve(name);
+      }, 2000);
+    });
+  }
+
+  const getHobbies = (name) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('inside hobby');
+        console.log(name);
+        resolve(['football', 'taekwondo']);
+      }, 2000);
+    });
+  };
+
+  async function funCall() {
+    const nm = await getName('Bhanu');
+    console.log(`promise ${nm}`);
+    const hobby = await getHobbies(nm);
+    console.log(hobby);
+  }
+
+  funCall();
+
+  console.log('end');
+</script>

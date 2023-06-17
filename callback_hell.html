@@ -1,0 +1,31 @@
+<script>
+  const getRollNo = () => {
+    setTimeout(() => {
+      let rollno = [1, 2, 3, 4];
+      console.log(rollno);
+
+      setTimeout(
+        (rollno) => {
+          const biodata = {
+            name: 'Bhanu',
+            age: 22,
+          };
+          console.log(`name is ${biodata.name}, rollno : ${rollno}`);
+
+          setTimeout(
+            (name) => {
+              biodata.gender = 'male';
+              console.log(`name is ${name}, ${biodata.gender}`);
+            },
+            1000,
+            biodata.name
+          );
+        },
+        2000,
+        rollno[2]
+      );
+    }, 3000);
+  };
+
+  getRollNo();
+</script>
