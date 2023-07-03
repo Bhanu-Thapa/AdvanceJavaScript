@@ -1,0 +1,15 @@
+<script>
+  const arr = [5, 1, 3, 6, 2];
+
+  const companies = [
+    { name: 'bhanu', category: 'auto' },
+    { name: 'taddy', category: 'manual' },
+  ];
+
+  arr.sort((a, b) => a - b);
+  console.log(arr);
+
+  companies.sort((c1, c2) => (c1.name - c2.name ? 1 : -1));
+  // companies.sort((c1, c2) => (c1.name - c2.category ? 1 : -1));
+  console.log(companies);
+</script>

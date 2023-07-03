@@ -1,0 +1,23 @@
+<script>
+  const arr = [5, 1, 6, 7, 2];
+
+  const sum = arr.reduce(function (acc, curr) {
+    acc += curr;
+    return acc;
+  }, 0);
+  console.log(sum);
+
+  const asum = arr.reduce((acc, curr) => (acc += curr), 0);
+  console.log(asum);
+
+  const grt = arr.reduce((gr, curr) => {
+    if (curr > gr) {
+      gr = curr;
+    }
+    return gr;
+  }, 0);
+  console.log(grt);
+
+  const agrt = arr.reduce((gr, curr) => (curr > gr ? (gr = curr) : gr), 0);
+  console.log(agrt);
+</script>

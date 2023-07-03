@@ -1,0 +1,37 @@
+<script>
+  const users = [
+    { firstName: 'taddy', lastName: 'maddy', age: 21 },
+    { firstName: 'waddy', lastName: 'naddy', age: 21 },
+    { firstName: 'Bhanu', lastName: 'Thapa', age: 22 },
+    { firstName: 'rohan', lastName: 'mac', age: 50 },
+    { firstName: 'tiko', lastName: 'chi', age: 40 },
+  ];
+
+  const output = users.map((x) => `${x.firstName} ${x.lastName}`);
+  console.log(output);
+
+  const count = users.reduce((acc, y) => {
+    if (acc[y.age]) {
+      acc[y.age] = ++acc[y.age];
+    } else {
+      acc[y.age] = 1;
+    }
+    return acc;
+  }, {});
+
+  console.log(count);
+
+  const first = users
+    .filter((info) => info.age < 39)
+    .map((info) => info.firstName);
+
+  console.log(first);
+
+  const red = users.reduce((acc, ag) => {
+    if (ag.age < 30) {
+      acc.push(ag.firstName);
+    }
+    return acc;
+  }, []);
+  console.log(red);
+</script>
